@@ -166,9 +166,11 @@ export default class Drawer extends React.Component {
       return;
     }
 
+    if (this.isOpen()){
+        this.close();
+    }
+
     e.preventDefault();
-    e.stopPropagation();
-    if (this.isOpen()) this.close();
   }
 
   render() {

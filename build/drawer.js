@@ -217,9 +217,11 @@ var Drawer = function (_React$Component) {
         return;
       }
 
+      if (this.isOpen()) {
+        this.close();
+      }
+
       e.preventDefault();
-      e.stopPropagation();
-      if (this.isOpen()) this.close();
     }
   }, {
     key: 'render',

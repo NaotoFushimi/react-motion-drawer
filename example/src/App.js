@@ -1,4 +1,6 @@
-import Drawer from '../../lib/drawer.jsx';
+//import Drawer from '../../lib/drawer.jsx';
+const Drawer = require("naoto243-react-motion-drawer");
+
 import React, { Component } from 'react';
 
 const style = {

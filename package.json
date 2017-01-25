@@ -3,7 +3,7 @@
   "version": "3.0.1",
   "description": "Navigation drawer built with the awesome react-motion and react-hammerjs",
   "scripts": {
-    "build": "babel lib --out-dir ./",
+    "build": "babel lib --out-dir ./build/",
     "serve": "node example/server.js",
     "open": "opn http://localhost:8888/example/index.html",
     "lint": "eslint lib",
@@ -11,14 +11,10 @@
     "minor-release": "npm run build && npm version minor && npm publish && git push --follow-tags",
     "major-release": "npm run build && npm version major && npm publish && git push --follow-tags"
   },
-  "main": "./drawer.js",
-  "files": [
-    "drawer.js",
-    "styles.js"
-  ],
+  "main": "./build/drawer.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stoeffel/react-motion-drawer.git"
+    "url": "https://github.com/NaotoFushimi/react-motion-drawer"
   },
   "keywords": [
     "react",
@@ -32,9 +28,9 @@
   "author": "Christoph Hermann <schtoeffel@gmail.com> (http://github.com/stoeffel)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stoeffel/react-motion-drawer/issues"
+    "url": "https://github.com/NaotoFushimi/react-motion-drawer/issues"
   },
-  "homepage": "https://github.com/stoeffel/react-motion-drawer",
+  "homepage": "https://github.com/NaotoFushimi/react-motion-drawer",
   "devDependencies": {
     "babel-core": "^5.4.7",
     "babel-eslint": "^4.1.3",
