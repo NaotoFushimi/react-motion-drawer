@@ -28,24 +28,31 @@ export default class Drawer extends React.Component {
     overlayColor: string,     // color of the overlay
     fadeOut: bool,            // fade out
     offset: number,           // offset
+    onTouchOverlay : func,
   };
 
   static defaultProps = {
-    zIndex: 10000,
-    noTouchOpen: false,
-    noTouchClose: false,
-    onChange: () => {},
-    overlayColor: 'rgba(0, 0, 0, 0.4)',
-    config: [350, 40],
-    open: false,
-    width: 300,
-    height: '100%',
-    handleWidth: 20,
-    peakingWidth: 50,
-    panTolerance: 50,
-    right: false,
-    fadeOut: false,
-    offset: 0,
+      zIndex: 10000,
+      noTouchOpen: false,
+      noTouchClose: false,
+      onChange: () => {
+      },
+      overlayColor: 'rgba(0, 0, 0, 0.45)',
+      config: [350, 40],
+      open: false,
+      width: 300,
+      height: '100%',
+      handleWidth: 20,
+      peakingWidth: 50,
+      panTolerance: 50,
+      right: false,
+      fadeOut: true,
+      offset: 0,
+      onTouchOverlay: null,
+      drawerStyle : {
+          background: '#F9F9F9',
+          boxShadow: 'rgba(0, 0, 0, 0.188235) 0px 10px 20px, rgba(0, 0, 0, 0.227451) 0px 6px 6px'
+      }
   };
 
   componentWillReceiveProps(nextProps) {
@@ -153,7 +160,14 @@ export default class Drawer extends React.Component {
   }
 
   onOverlayTap(e) {
+
+    if (this.props.onTouchOverlay != null){
+      this.props.onTouchOverlay(e);
+      return;
+    }
+
     e.preventDefault();
+    e.stopPropagation();
     if (this.isOpen()) this.close();
   }
 

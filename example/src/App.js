@@ -15,7 +15,6 @@ export default class App extends Component {
   render() {
     const { openLeft, openRight } = this.state;
     const drawerProps = {
-      overlayColor: 'rgba(255,255,255,0.6)',
       drawerStyle: style
     };
 
@@ -24,7 +23,12 @@ export default class App extends Component {
       { !openRight &&
       <Drawer {...drawerProps} fadeOut={true} open={openLeft} onChange={open => this.setState({ openLeft: open})}>
         <div style={{ width: '100%' }}>
-          <img src="../media/planurahuette.jpg"/>
+          <img
+              onClick={()=>{
+                this.setState({ ...this.state , ...{openLeft : !this.state.openLeft}});
+              }}
+              src="../media/planurahuette.jpg"
+          />
         </div>
         <div style={{ padding: '2em' }}>
           <h3>Navigation</h3>
@@ -59,6 +63,18 @@ export default class App extends Component {
         </div>
       </nav>
       </div>
+        <div
+            style={{
+              backgroundColor : "#707070",
+              height : "120px",
+              width : "100%"
+            }}
+            onClick={()=>{
+              this.setState({ ...this.state , ...{openLeft : !this.state.openLeft}});
+            }}
+        >
+          Hoge
+        </div>
       </div>
     );
   }

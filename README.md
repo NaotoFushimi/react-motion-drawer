@@ -9,6 +9,12 @@
   <img  align="center" src="./media/drawer.gif">
 </p>
 
+## I Forked From https://github.com/stoeffel/react-motion-drawer
+
++ Props
+    onTouchOverlay : func
++ DefaultDrawerStyle
+
 > Navigation drawer built with the awesome [react-motion][rm] by [@chenglou][c] and [react-hammerjs][rh] by [@JedWatson][j]
 
 ## Example
