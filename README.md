@@ -11,9 +11,10 @@
 
 ## I Forked From https://github.com/stoeffel/react-motion-drawer
 
-+ Props
-    onTouchOverlay : func
-+ DefaultDrawerStyle
+I Added...  
+* Props::onTouchOverlay : func  
+* DefaultDrawerStyle  
+  
 
 > Navigation drawer built with the awesome [react-motion][rm] by [@chenglou][c] and [react-hammerjs][rh] by [@JedWatson][j]
 
